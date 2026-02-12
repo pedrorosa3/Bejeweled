@@ -1,0 +1,174 @@
+<!--
+  ITW(LTI)
+  2022/2023
+  Grupo nº36
+  PL24
+  Pedro Rosa nº60294
+  Tomás Nogueira nº60285
+  Tiago Raposo nº60293
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/style1.css">
+    <script src="Scripts/comportamento.js"></script>
+    <title>Tabelas</title>
+</head>
+
+<body onload="AtualizaClassificações()">
+    <header class="header">
+        <div class="middle-header">
+            <div class="logo-header">
+                <h1>Bejewled</h1>
+            </div>
+    
+            <ul class="nav" id="navegador-header">
+              <li><a href="Index.html" class="nav-a">Home</a></li>
+              <li><a href="Tabelas.html" class="nav-a">Classificações</a></li>
+              
+                
+            </ul>
+        </div>
+    </header>
+
+    <div id="id01" class="modal" >
+  
+      <form class="modal-content"  name="login-form" id="loginform">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" id="close-login" title="Close Modal">&times;</span>
+          <img src="Imagens/background.jpg" alt="Avatar" class="avatar">
+        </div>
+  
+        <div class="container">
+          <label for="uname"><b>Nome de utilizador</b></label>
+          <input type="text" placeholder="Insere o nome de utilizador" name="uname" required>
+          <br>
+          <label for="psw1"><b>Password</b></label>
+          <input type="password" placeholder="Insere a password" name="psw1" required>
+          
+          <button type="button"  class="loginbtn" id="btn_login" >Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Lembrar-me
+          </label>
+        </div>
+      
+      </form>
+    </div>
+  
+  
+  
+    <div id="id02" class="modal">
+  
+      <form class="modal-content" name="signup-form" id="spform">
+        <div class="container">
+          <span onclick="document.getElementById('id02').style.display='none'" class="close" id="close-signup" title="Close Modal">&times;</span>
+          <h1>Sign Up</h1>
+          <p>Preenche os espaços em branco para criar uma conta</p>
+          <hr class="hr-signup">
+          <label for="email"><b>Nome de Utilizador</b></label>
+          <input type="text" placeholder="Insere o nome de utilizador" name="email" required>
+  
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Insere a password" name="psw" required>
+  
+          <label for="psw-repeat"><b>Repete a Password</b></label>
+          <input type="password" placeholder="Repete a Password" name="psw-repeat" required>
+        
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Lembrar-me
+          </label>
+  
+        
+  
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+            <button type="button"  onclick="document.getElementById('id02').style.display='none'" class="signupbtn" id="btn_signup">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <h1 class="título-tabelas">Tabelas de classificação</h1>
+    <h2 class="título-tabelas">TOP 10</h2>
+
+
+    <table class="tabela-classificações">
+        <tr>
+            <th class="th-classificações" scope="col">Nome</th>
+            <th class="th-classificações" scope="col">Pontuação</th>
+            <th class="th-classificações" scope="col">Duração</th>
+        </tr>
+        <tr>
+            <td id="nome1">Nome1</td>
+            <td id="pontuação1">Pontuação</td>
+            <td id="duração1">Pontuação</td>
+
+
+        </tr>
+        <tr>
+            <td id="nome2">Nome2</td>
+            <td id="pontuação2">Pontuação</td>
+            <td id="duração2">Pontuação</td>
+
+        </tr>
+        <tr>
+            <td id="nome3">Nome3</td>
+            <td id="pontuação3">Pontuação</td>
+            <td id="duração3">Pontuação</td>
+
+        </tr>
+        <tr>
+            <td id="nome4">Nome4</td>
+            <td id="pontuação4">Pontuação</td>
+            <td id="duração4">Pontuação</td>
+
+        </tr>
+        <tr>
+            <td id="nome5">Nome5</td>
+            <td id="pontuação5">Pontuação</td>
+            <td id="duração5">Pontuação</td>
+
+        </tr>
+        <tr>
+            <td id="nome6">Nome6</td>
+            <td id="pontuação6">Pontuação</td>
+            <td id="duração6">Pontuação</td>
+
+        </tr>
+        <tr>
+            <td id="nome7">Nome7</td>
+            <td id="pontuação7">Pontuação</td>
+            <td id="duração7">Pontuação</td>
+
+        </tr>
+        <tr>
+            <td id="nome8">Nome8</td>
+            <td id="pontuação8">Pontuação</td>
+            <td id="duração8">Pontuação</td>
+
+        </tr>
+        <tr>
+            <td id="nome9">Nome9</td>
+            <td id="pontuação9">Pontuação</td>
+            <td id="duração9">Pontuação</td>
+
+        </tr>
+        <tr>
+            <td id="nome10">Nome10</td>
+            <td id="pontuação10">Pontuação</td>
+            <td id="duração10">Pontuação</td>
+
+        </tr>
+
+
+    </table>
+
+
+    <a id="BotaoVoltar" href="Index.html"><strong>Voltar</strong></a>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!--
+  ITW(LTI)
+  2022/2023
+  Grupo nº36
+  PL24
+  Pedro Rosa nº60294
+  Tomás Nogueira nº60285
+  Tiago Raposo nº60293
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/style1.css">
+    <script src="Scripts/comportamento.js"></script>
+    <title>Jogar</title>
+</head>
+<body onload="CriaEstatisticaJogador()">
+
+  <h1 id="título-jogar" >Jogar</h1>
+  <div id="show">
+  </div>
+   
+  <header class="header">
+    <div class="middle-header">
+      <div class="logo-header">
+        <h1>Bejewled</h1>
+      </div>
+
+      <ul class="nav" id="navegador-header">
+        <li><a href="Index.html" class="nav-a">Home</a></li>
+        <li><a href="Tabelas.html" class="nav-a">Classificações</a></li>
+        <li id="li3"><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Sign Up</button></li>
+        <li id="li4"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Login</button></li>
+          
+      </ul>
+
+    </div>
+  </header>
+  <div id="id01" class="modal" >
+  
+    <form class="modal-content"  name="login-form" id="loginform">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" id="close-signup" title="Close Modal">&times;</span>
+        <img src="Imagens/background.jpg" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="uname"><b>Nome de utilizador</b></label>
+        <input type="text" placeholder="Insere o nome de utilizador" name="uname" required>
+        <br>
+        <label for="psw1"><b>Password</b></label>
+        <input type="password" placeholder="Insere a password" name="psw1" required>
+        
+        <button type="button"  class="loginbtn" id="btn_login" >Login</button>
+        
+      </div>
+    
+    </form>
+  </div>
+
+
+
+  <div id="id02" class="modal">
+
+    <form class="modal-content" name="signup-form" id="spform">
+      <div class="container">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" id="close-signup" title="Close Modal">&times;</span>
+        <h1>Sign Up</h1>
+        <p>Preenche os espaços em branco para criar uma conta</p>
+        <hr class="hr-signup">
+        <label for="email"><b>Nome de Utilizador</b></label>
+        <input type="text" placeholder="Insere o nome de utilizador" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Insere a password" name="psw" required>
+
+        <label for="psw-repeat"><b>Repete a Password</b></label>
+        <input type="password" placeholder="Repete a Password" name="psw-repeat" required>
+
+        <label for="idade"><b>Introduz a tua idade</b></label>
+        <input type="text" placeholder="Idade" name="idade" required>
+        <p>Género :</p>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="feminino" name="genero" value="feminino">
+        <label for="feminino">Feminino</label><br>
+        <input type="radio" id="outro" name="genero" value="outro">
+        <label for="outro">Outro</label>
+      
+        
+
+      
+
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="signupbtn" id="btn_signup">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div id="botões-jogar">
+    <button onclick="IniciaJogo()" id="btniniciajogo">Começar Jogo</button>
+    <button onclick="cancelaJogo()" id="btncancelajogo" >Acabar Jogo</button>
+  </div>
+
+    
+
+    <div class="teste" id="detalhes">
+      <p> <span id="spanJoiasEliminadas"></span></p>
+      <p> <span id="spanJoiasRestantes"></span> </p>
+      <p> <span id="spanPontuaçãoJogo"></span></p>
+      <p> <span id="spanTempoJogo"></span></p>
+      
+    </div>
+    
+
+
+
+    <div class="board" id="board">
+        <div class="cell" id="cell1"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell2"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell3"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell4"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell5"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell6"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell7"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell8"onclick="trataTrocarJoias(this)"></div>
+  
+  
+        <div class="cell" id="cell9"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell10"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell11"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell12"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell13"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell14"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell15"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell16"onclick="trataTrocarJoias(this)"></div>
+  
+  
+        <div class="cell" id="cell17"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell18"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell19"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell20"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell21"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell22"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell23"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell24"onclick="trataTrocarJoias(this)"></div>
+  
+  
+        <div class="cell" id="cell25"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell26"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell27"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell28"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell29"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell30"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell31"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell32"onclick="trataTrocarJoias(this)"></div>
+  
+  
+        <div class="cell" id="cell33"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell34"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell35"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell36"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell37"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell38"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell39"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell40"onclick="trataTrocarJoias(this)"></div>
+  
+  
+        <div class="cell" id="cell41"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell42"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell43"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell44"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell45"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell46"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell47"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell48"onclick="trataTrocarJoias(this)"></div>
+  
+  
+        <div class="cell" id="cell49"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell50"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell51"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell52"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell53"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell54"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell55"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell56"onclick="trataTrocarJoias(this)"></div>
+  
+  
+        <div class="cell" id="cell57"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell58"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell59"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell60"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell61"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell62"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell63"onclick="trataTrocarJoias(this)"></div>
+        <div class="cell" id="cell64"onclick="trataTrocarJoias(this)"></div>
+    </div>
+    <audio id="audio" controls autoplay  >
+      <source src="Media/bejeweledmusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    
+    
+    <div class="Footer">
+        <a id="BotaoVoltar" href="Index.html" ><strong>Voltar</strong></a>
+    </div> 
+    
+</body>
+</html>

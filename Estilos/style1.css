@@ -1,0 +1,859 @@
+/*
+  ITW(LTI)
+  2022/2023
+  Grupo nº36
+  PL24
+  Pedro Rosa nº60294
+  Tomás Nogueira nº60285
+  Tiago Raposo nº60293
+
+*/
+
+
+/*Background*/ 
+
+body{
+    background-image: url("../Imagens/background.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;       
+}
+
+ 
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+/*Botão de Voltar(Geral)*/
+
+
+#BotaoVoltar {
+    background-color: rgba(240, 28, 28, 0.966);
+    
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    color:black;
+    position:absolute;
+    border-radius: 25px;
+    border:groove;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    bottom: 20px;
+    left: 10px;
+    
+}
+      
+#BotaoVoltar:hover {
+    background-color: #645e5e;
+    color: black;
+    }
+
+
+/* Definições */
+
+.container1 {  
+    display: grid;
+    grid-template-columns: 1.1fr 1.3fr 1.3fr 1.1fr;
+    grid-template-rows: 0.5fr 1.3fr 1.4fr 1.3fr 0.5fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header header"
+      "left1 left1 right1 right1"
+      "left2 left2 right2 right2"
+      "left3 left3 right3 right3"
+      "footer footer footer footer";
+    
+    
+}
+  
+.Header { grid-area: header; 
+    text-align: center;
+}
+.Audio{ grid-area: left1; }
+.Video { grid-area: left2; }
+.Comandos { grid-area: left3; }
+.footer { grid-area: footer; }
+.ComandosImage{ grid-area: right3;}
+.audioImage{grid-area: right1;}
+.videoImage{grid-area: right2;}
+
+
+
+.BotaoDefinicoes{
+    position:absolute;
+    font-size: 2em;
+    color:skyblue;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 8px 16px;
+    border:groove;
+    
+}
+
+.BotaoDefinicoes:hover{
+    background-color: #dbd6d6;
+    color:black;
+}
+
+#h1Definições{
+    text-align: center;
+    color: lightskyblue;
+    font-size: 4em;
+    margin-top: 6%;
+}
+.Audio{
+    position: static;
+    text-align: center;
+    margin-left: 50% ;
+    margin-top: 5%;
+}
+.audioImage{
+    display: block;
+    margin-left: 10%; 
+    margin-top: 3%;
+    
+
+}
+.Comandos{
+    position: static;
+    text-align: center;
+    margin-left: 38% ;
+    margin-top: -30%;
+
+}
+.ComandosImage{
+    display: block;
+    margin-left: 10%;
+    margin-top: -31%;
+    
+    
+}
+.imagem-comandos{
+    width: 80px;
+}
+.imagem-audio{
+    width: 80px;
+}
+
+
+
+
+/*Index*/
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;  
+    border-radius: 8px;
+    margin-top: 10% ;
+    
+}
+
+
+#jogar{
+    
+    margin-left:25%;
+    margin-bottom: 30%;
+    width:auto;
+}
+#definições{
+    
+    margin-left:35%;
+    margin-bottom: 30%;
+    width: auto;
+}
+#informações{
+    
+    margin-left:50%;
+    margin-bottom: 30%;
+    width:auto;
+}
+#tabelas{
+    
+    margin-left:65%;
+    margin-bottom: 30%;
+    width: auto;
+    
+}
+
+
+
+/* Informações*/
+
+
+.video-informações{
+    position:absolute;
+    display: block;
+    margin-left: 50%;
+    margin-right: auto;  
+    border-radius: 8px;
+    margin-top:-15%;
+    width: 30%;
+}
+
+tr:hover{
+    background-color:rgba(11, 228, 228, 0.25); 
+    color: black
+}
+th{
+    
+    background-color: rgba(11, 228, 228, 0.5);
+    color:black;
+    font-size: larger;
+    text-align: center;
+}
+td{
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+
+}
+.tabela-informações{
+    
+    margin-left: 5%;
+    width: 35%;
+    height: 50%;
+}
+.informações-do-jogo{
+    text-align: center;
+    font-size: 4em;
+    color:lightskyblue;
+    margin-top: 8%;
+}
+
+.subtitulos-informações{
+    font-size: 2em;
+    color:lightskyblue;
+}
+
+
+
+.regras{
+    font-size: 20px;
+    color: white;
+    background-color:rgba(255, 255, 255, 0.2);
+    display: inline-block;
+}
+
+
+
+
+/* Jogar*/
+
+#btniniciajogo{
+    position: absolute;
+    display: block;
+    width: 5%;
+    top:25%;
+    
+}
+#btncancelajogo{
+    position: absolute;
+    display: block;
+    width: 5%;
+    top: 35%;
+    
+}
+
+#btnjogaragain{
+    position: absolute;
+    display: block;
+    width: 5%;
+    top: 45%;
+
+}
+
+#detalhes{
+    position: absolute;
+    display: block;
+    color: white;
+    top: 55%;
+    
+    
+}
+
+#título-jogar{
+    text-align: center;
+    color:lightskyblue;
+    font-size: 4em;
+    margin-top: 8%;
+}
+
+.Botao-começar-conteudo{
+    display: inline-block;
+    border: 2px red;
+}
+
+.BotaoComeçar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+  
+  .Triangulo {
+    border-left: 12px solid white;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+  
+.Parar{
+    display: inline-block;
+    border:2px red;
+}
+
+.Botao-parar-conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+   
+  .BotaoParar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+   
+  .BotaoEsquerda {
+    width: 5px;
+    height: 18px;
+    background-color: white;
+    margin-right: 4px;
+    
+    
+}
+
+  .BotaoDireita {
+    width: 5px;
+    height: 18px;
+    background-color: white;
+    
+    
+    
+}
+
+.BotaoComeçar:hover, .BotaoParar:hover{
+  background-color: rgba(34, 3, 145, 0.7);
+}
+
+
+.Comando{
+    display: block;
+    bottom:20px;
+    left: 200px;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+/* Tabuleiro*/
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 0;
+    border: 40px solid black;
+    border-image: url(../Imagens/borda_tabuleiro-removebg-preview.png) 30 stretch;
+    width: 70%;
+    height: 500px;
+    margin: auto auto;
+  }
+  
+  .cell {
+    background-color: transparent;
+    border: 1px solid black;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center center;
+}
+
+
+
+
+
+
+
+
+/* Áudio*/
+#título-audio{
+    text-align:center;
+    color: lightskyblue;
+    font-size: 4em;
+    margin-top: 8%;
+}
+
+.sound{
+    display: block;
+    width: 30%;
+    margin: auto;
+    margin-top: 15%;
+    color: white;
+    font-size: 25px;
+}
+
+
+
+
+/* Comandos*/
+
+.video-comandos{
+    position:absolute;
+    display: block;
+    margin-left: 65%;
+    margin-right: 0%;  
+    border-radius: 8px;
+    margin-top:-20%;
+    width: 30%;
+}
+
+#título-comandos{
+    text-align: center;
+    font-size: 4em;
+    color: lightskyblue;
+    margin-top: 8%;
+}
+#subtítulos-comandos{
+    font-size: 3em;
+    color:lightskyblue;
+    
+}
+.regras-comandos{
+    font-size: 30px;
+    color: white;
+    text-align: justify;
+    background-color:rgba(255, 255, 255, 0.2);
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+/* Tabelas*/
+
+.título-tabelas{
+    text-align: center;
+    font-size: 4em;
+    color: lightskyblue;
+    margin-top: 8%;
+}
+
+table,th, td{
+    border-collapse: collapse;
+    border:2px solid;
+    margin:auto;
+}
+.tabela-classificações{
+    width: 80%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+
+.th-classificações{
+    height: 70px;   
+}
+
+
+/* Header*/
+
+
+.header{
+    width: 100%;
+    height: 80px;   
+    position: absolute;
+    background-color: rgba(72, 15, 187, 0.885);
+    display: inline-block;
+    top: 0;
+    left: 0;
+    
+}
+
+.middle-header{
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.logo-header{
+    height: 100%;
+    display: table;
+    float: left;
+}
+.logo-header h1{
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 32px;
+}
+
+.nav{
+    float: right;
+    height: 100%;
+    
+
+}
+
+.nav-a{
+    display: table-cell;
+    float: left;
+    margin-top: 20px;
+    
+    
+
+}
+.nav a{
+    color: white;
+    
+}
+.nav li{
+    display: table-cell;
+    height: 100%;
+    font-size: 18px;
+    color:white;
+    padding: 0px 25px;
+    float: left;
+    
+    
+    
+    
+}
+.nav li:last-child{
+    padding-right: 0;
+}
+
+
+
+
+
+/* LogIn */
+
+.botao-signup{
+    display: block;
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 30%;
+  
+  }
+
+
+ 
+
+
+  
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}  
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+#close-signup {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+#close-login {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#close-esta{
+    position: absolute;
+    right: 5px;
+    top: 2px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.hr-signup {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.modal-content {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    margin: 5% auto 15% auto; 
+    border: 4px solid black;
+    box-shadow: 0 0 30px rgba(0,0,0,.7);
+    border-radius: 5px;
+    width: 80%; 
+    
+}
+#tabela_classificações{
+     
+    position: absolute; 
+    z-index: 1; 
+    left: 10%;
+    top: 10%;
+    width: 80%; 
+    height: 70%; 
+    overflow: auto; 
+    background-color: transparent;
+    padding-top: 60px;
+
+}
+
+#tabela_estatisticas{
+    position: absolute; 
+    z-index: 1; 
+    left: 70%;
+    top: 2%;
+    width: 20%; 
+    height: 10%;
+    font-size: 12px;
+    overflow: auto; 
+    background-color: transparent;
+    padding-top: 60px;
+    color: white;
+
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: transparent;
+    padding-top: 60px;
+   
+}
+
+span.psw1 {
+    float: right;
+    padding-top: 16px;
+}
+
+.container {
+    padding: 16px;
+}
+  
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+  
+  
+img.avatar {
+    width: 20%;
+    border-radius: 50%;
+}
+
+button:hover {
+    opacity:1;
+}
+
+button {
+    background-color: #5607e0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid black;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+input[type=text], input[type=password] {
+    width: 97%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+      
+
+/*Media*/
+      
+
+@media  screen and (max-width: 900px){
+    .nav li, button {
+        
+        padding: 0px 25px;
+        margin: 0;
+        font-size: 8px;
+        margin-top: 3px;
+        
+        
+        
+    }
+    .nav-a{
+        display: table-cell;
+        float: left;
+        margin-top: 3px;
+    
+    }
+    .logo-header h1{
+        font-size: 11px;
+    }
+    .header{
+        height: 50px;
+
+    }
+}
+
+
+@media  screen and (max-width: 1050px){
+    .ComandosImage{
+        margin-left: 40%;
+    }
+    .audioImage{
+        margin-left: 40%;
+    }
+    .Comandos{
+        margin-left: 20%;
+    }
+    .Audio{
+        margin-left: 20%;
+    }
+}
+
+
+@media  screen and (max-width: 1350px) {
+    
+    #jogar {
+        display: block;
+        margin-top: 5%;
+        margin-left: 25%;
+    }
+    #definições{
+        display: block;
+        margin-top: 15%;
+        margin-left: 25%;
+        
+    
+
+    }
+    #informações{
+        display: block;
+        margin-top: 25%;
+        margin-left: 25%;
+
+    }
+    #tabelas{
+        display: block;
+        margin-top: 35%;
+        margin-left: 25%;
+    }
+    
+}
+
+
+@media  screen and (max-width: 700px){
+    .regras{
+        font-size: 12px;
+    }
+    .informações-do-jogo{
+        font-size: 46px;
+    }
+    .título-tabelas{
+        font-size: 46px;
+    }
+
+}
+
+
+@media  screen and (max-width: 1375px){
+    .video-comandos{
+        margin-left: 0;
+        margin-top: 0;
+        width: 40%;
+    }
+    .regras-comandos{
+        font-size: 18px;
+    }
+}
+
+@media  screen and (max-width: 800px){
+    button{
+        padding: 0;
+        margin:0;
+    }
+}
+    
+    
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn, .signupbtn{
+        width: 100%;
+        
+    }
+        
+} 
+
+
+
