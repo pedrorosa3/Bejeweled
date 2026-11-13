@@ -1,47 +1,163 @@
-# Bejeweled Web Clone 💎
+<div align="center">
 
-## About the Project
-This project is a web-based implementation of the popular tile-matching game **Bejeweled**. It was developed as an academic project for the **Introduction to Web Technologies (ITW)** course during the 2022/2023 academic year.
+# 💎 Bejeweled Web Clone
 
-The goal was to create a fully functional game using standard web technologies, integrating a website with rules and tutorials alongside the game logic itself.
+**Jogo de combinação de gemas desenvolvido com HTML, CSS e JavaScript puro**
 
-## Features
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-### Core Mechanics
-* **Grid System:** An 8x8 board filled with 7 different types of gems.
-* **Gameplay:** Swap adjacent gems (horizontally or vertically) to align 3 or more of the same type.
-* **Physics:** Matched gems are eliminated, and gems above fall to fill the empty spaces, potentially causing chain reactions.
-* **Scoring:** Points are calculated based on the number of gems aligned (n) using the formula (n-3)+1.
-* **Level Completion:** The game ends when the player eliminates 20 or more gems.
+![Ano letivo](https://img.shields.io/badge/Ano_letivo-2022%2F2023-8A2BE2?style=flat-square)
+![Unidade curricular](https://img.shields.io/badge/UC-ITW_(LTI)-blue?style=flat-square)
+![Grupo](https://img.shields.io/badge/Grupo-36_·_PL24-green?style=flat-square)
 
-### User System & Data
-* **User Registration:** Players must identify themselves (email, password, age, gender) to play.
-* **Persistence:** User data and match history are saved using the browser's **Local Storage**.
-* **Leaderboard:** Displays the top 10 scores and completion times.
-* **Statistics:** Tracks total games played, total time played, and maximum score per user.
+<img src="Imagens/logo1.png" alt="Logo Bejeweled" width="320"/>
 
-### Interface
-* **Responsive Design:** The layout adjusts automatically to different screen sizes and orientations.
-* **HUD:** Real-time display of elapsed time, score, and gems remaining to win.
+</div>
 
-## Technologies Used
-* **HTML5:** For structure and content.
-* **CSS3:** For styling and responsive layout.
-* **JavaScript:** For game logic, DOM manipulation, and state management.
-
-## How to Play
-1.  **Register/Login:** Enter your details to start tracking your stats.
-2.  **Start Game:** The board will initialize with random gems.
-3.  **Move:** Click (or use the keyboard) to select two adjacent gems to swap them.
-    * *Note:* Swaps are only valid if they result in a match of 3 or more gems.
-4.  **Win:** Eliminate at least 20 gems to complete the level.
-
-## Project Structure
-The project files are organized as follows:
-* `images/` or `media/`: Graphic assets, icons, and sounds.
-* `styles/`: CSS stylesheets.
-* `scripts/`: JavaScript logic files.
-
-  
 ---
-*This project was developed for educational purposes based on the 2001 PopCap Games classic.*
+
+## 📑 Índice
+
+- [Sobre o projeto](#-sobre-o-projeto)
+- [Autores](#-autores)
+- [Como executar](#-como-executar)
+- [Como jogar](#-como-jogar)
+- [Funcionalidades](#-funcionalidades)
+- [Estrutura do projeto](#-estrutura-do-projeto)
+- [Tecnologias](#-tecnologias)
+
+---
+
+## 📖 Sobre o projeto
+
+Implementação web do clássico jogo de combinação de peças **Bejeweled**, desenvolvida como projeto académico da unidade curricular **Introdução às Tecnologias Web (ITW)** da Licenciatura em Tecnologias de Informação (LTI).
+
+O objetivo foi criar um jogo totalmente funcional usando apenas tecnologias web standard, integrando um website com regras, tutoriais em vídeo, definições e tabelas de pontuação.
+
+| | |
+|---|---|
+| 📅 **Data** | Ano letivo 2022/2023 |
+| 🏫 **Unidade curricular** | Introdução às Tecnologias Web (ITW) — LTI |
+| 👥 **Grupo** | Nº 36 · Turma PL24 |
+| 📄 **Relatório** | [Relatório_Projeto_ITW_Grupo36.pdf](Relatório/Relatório_Projeto_ITW_Grupo36.pdf) |
+
+---
+
+## 👥 Autores
+
+| Nome | Número |
+|------|:------:|
+| **Pedro Rosa** ([@pedrorosa3](https://github.com/pedrorosa3)) | 60294 |
+| **Tomás Nogueira** | 60285 |
+| **Tiago Raposo** | 60293 |
+
+---
+
+## 🚀 Como executar
+
+O projeto não precisa de instalação nem de dependências — basta um browser moderno (Chrome, Firefox, Edge…).
+
+### 1. Obter o código
+
+```bash
+git clone https://github.com/pedrorosa3/Bejeweled.git
+cd Bejeweled
+```
+
+> Em alternativa, descarrega o ZIP em **Code → Download ZIP** e extrai-o.
+
+### 2. Abrir o jogo
+
+**Opção A — Abrir diretamente**
+
+Faz duplo clique no ficheiro **`Index.html`** e o site abre no browser.
+
+**Opção B — Servidor local (recomendado)**
+
+Alguns browsers limitam o carregamento de áudio/vídeo a partir de ficheiros locais. Para evitar isso, serve a pasta com um servidor local:
+
+```bash
+# Com Python 3
+python -m http.server 8000
+```
+
+Depois abre <http://localhost:8000/Index.html> no browser.
+
+**Opção C — VS Code**
+
+Instala a extensão **Live Server**, clica com o botão direito em `Index.html` e escolhe **"Open with Live Server"**.
+
+---
+
+## 🎮 Como jogar
+
+1. **Regista-te / Inicia sessão** — introduz os teus dados (email, palavra-passe, idade, género) para guardar as estatísticas.
+2. **Começa o jogo** — vai a **Jogar**; o tabuleiro é preenchido com gemas aleatórias.
+3. **Troca gemas** — seleciona duas gemas adjacentes (na horizontal ou vertical) para as trocar.
+   > ⚠️ A troca só é válida se formar uma linha de **3 ou mais** gemas iguais.
+4. **Ganha** — elimina **20 ou mais gemas** para completar o nível.
+
+---
+
+## ✨ Funcionalidades
+
+### 🧩 Mecânica de jogo
+- **Tabuleiro 8×8** com 7 tipos diferentes de gemas.
+- **Trocas** entre gemas adjacentes para alinhar 3 ou mais iguais.
+- **Queda das gemas** — as gemas eliminadas dão lugar às de cima, podendo gerar reações em cadeia.
+- **Pontuação** calculada pela fórmula `(n − 3) + 1`, onde *n* é o número de gemas alinhadas.
+- **Fim de nível** ao eliminar 20 ou mais gemas.
+
+### 👤 Utilizadores e dados
+- **Registo de utilizadores** obrigatório para jogar.
+- **Persistência** dos dados e do histórico de jogos com **Local Storage**.
+- **Tabela de classificação** com o Top 10 de pontuações e tempos.
+- **Estatísticas** por utilizador: jogos realizados, tempo total e pontuação máxima.
+
+### 🖥️ Interface
+- **Design responsivo** que se adapta a diferentes tamanhos e orientações de ecrã.
+- **HUD** em tempo real com tempo decorrido, pontuação e gemas restantes.
+- **Música de fundo** e **vídeos tutoriais** (como jogar e comandos).
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+Bejeweled/
+├── Index.html            # Página inicial
+├── Jogar.html            # Página do jogo
+├── Comandos.html         # Explicação dos comandos
+├── Informações.html      # Regras e informações
+├── Definições.html       # Definições do jogo
+├── Tabelas.html          # Classificações e estatísticas
+├── Audio.html            # Página de áudio
+├── Estilos/
+│   └── style1.css        # Folha de estilos
+├── Scripts/
+│   └── comportamento.js  # Lógica do jogo e gestão de utilizadores
+├── Imagens/              # Gemas, logótipos e fundos
+├── Media/                # Música e vídeos tutoriais
+└── Relatório/            # Relatório do projeto (PDF)
+```
+
+---
+
+## 🛠️ Tecnologias
+
+| Tecnologia | Utilização |
+|------------|------------|
+| **HTML5** | Estrutura e conteúdo das páginas |
+| **CSS3** | Estilos e layout responsivo |
+| **JavaScript** | Lógica do jogo, manipulação do DOM e gestão de estado |
+| **Local Storage** | Persistência de utilizadores e pontuações |
+
+---
+
+<div align="center">
+
+*Projeto desenvolvido para fins educativos, inspirado no clássico Bejeweled (PopCap Games, 2001).*
+
+</div>
